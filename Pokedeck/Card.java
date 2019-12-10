@@ -71,7 +71,7 @@ public class Card {
         
         this.hp = hp;
 
-        this.description = "";
+        this.description = "undefined";
 
     }
 
@@ -101,10 +101,6 @@ public class Card {
         return this.attacks;
     }
 
-
-    /**
-     * @param name the name to set
-     */
     public void setName(String name) {
         this.name = name;
     }
@@ -123,7 +119,8 @@ public class Card {
         this.type = type;
     }
 
-    public Boolean addAttack(Attack newAttack) {
+    public Boolean addAttack() {
+        Attack newAttack = new Attack();
         attacks.add(newAttack);
         return true;
     }
@@ -133,8 +130,17 @@ public class Card {
         return true;
     }
 
-    public void modifyDescription(String newDescription) {
-        this.description = newDescription;
+    public void modifyDescription() {
+
+        Scanner inputZone = new Scanner(System.in);
+        System.out.println("Current description :");
+        System.out.println(this.description);
+        System.out.println("Enter the new one :");
+        // inputZone.nextLine();
+        String description = inputZone.nextLine();
+        System.out.println("You entered : "+ description);
+
+        this.description = description;
     }
 
 

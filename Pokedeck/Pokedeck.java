@@ -10,8 +10,11 @@ public class Pokedeck {
 
         ArrayList<String> actions = new ArrayList<>();
         actions.add("choose");
-        actions.add("createDeck");
+        actions.add("getDeck");
+        actions.add("findCard");
         actions.add("addCard");
+        actions.add("changeDescription");
+        actions.add("addAttack");
         actions.add("stopProgram");
 
         Deck myDeck = new Deck();
@@ -39,15 +42,57 @@ public class Pokedeck {
             }
 
             switch (action) {
-                // case "createDeck":
-                    // Deck myNewDeck = new Deck();
-                    // break;
+                case "getDeck":
+                    ArrayList<Card> cards = myDeck.getDeck();
+                    for (int i = 0; i < cards.size(); i++) {
+                        
+                        System.out.println("--------------------");
+                        System.out.println("Card"+(i+1));
+                        System.out.println("Name : "+cards.get(i).getName());
+                        // System.out.println(" ");
+                        System.out.println("Type : "+cards.get(i).getType());
+                        // System.out.println(" ");
+                        System.out.println("Health points : "+cards.get(i).getHp());
+                        // System.out.println(" ");
+                        System.out.println("Description : "+cards.get(i).getDescription());
+                        // System.out.println(" ");
+                        System.out.println("Attacks : ");
+                        // System.out.println(" ");
+                        for (int j = 0; j < cards.get(i).getAttacks().size(); j++) {
+                            System.out.println("   - Name : "+cards.get(i).getAttacks().get(j).getName());
+                            System.out.println("     Damages : "+cards.get(i).getAttacks().get(j).getDamages());
+                            System.out.println("     Description : "+cards.get(i).getAttacks().get(j).getDescription());
+                        }
+                    }
+                    break;
+
+                case "findCard":
+                    
+                    break;
 
                 case "addCard":
                     if (Deck.getCpt() != 0) {
                         Card newCard = new Card();
                         myDeck.addCard(newCard);
                     }
+                    break;
+
+                case "changeDescription":
+                    System.out.println("Type the number of the card you want to change the description of : ");
+                    for (int i = 0; i < myDeck.getDeck().size(); i++) {
+                        System.out.println((i+1) + " - "+myDeck.getDeck().get(i).getName());
+                    }
+                    int cardIndex1 = inputZone.nextInt()-1;
+                    myDeck.getDeck().get(cardIndex1).modifyDescription();
+                    break;
+
+                case "addAttack":
+                    System.out.println("Type the number of the card you want to add an attack on : ");
+                    for (int i = 0; i < myDeck.getDeck().size(); i++) {
+                        System.out.println((i+1) + " - "+myDeck.getDeck().get(i).getName());
+                    }
+                    int cardIndex2 = inputZone.nextInt()-1;
+                    myDeck.getDeck().get(cardIndex2).addAttack();
                     break;
 
                 case "stopProgram":
