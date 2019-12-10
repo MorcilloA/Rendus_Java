@@ -6,10 +6,8 @@ import java.util.*;
 public class Pokedeck {
 
     public static void main(String[] args) {
-        // System.out.println("test");
 
         ArrayList<String> actions = new ArrayList<>();
-        actions.add("choose");
         actions.add("getDeck");
         actions.add("findCard");
         actions.add("addCard");

@@ -1,0 +1,7 @@
+My pokedeck is setted as a console interface. When you start it you can choose what action you'd like to perform.
+
+A deck is automatically created at launch. And one of the first action you need to do is to create your cards by typing "addCard".
+
+When you gave all the asked information for the creation, the other actions got an interest.
+
+After that you can consult your all deck with "getDeck" and see all the informations. You can also change the description of a pokemon by choosing the card. In the same way, you can add an attack on a specific pokemon with his name, descritpion and damages.
