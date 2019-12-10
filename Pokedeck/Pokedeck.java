@@ -67,7 +67,7 @@ public class Pokedeck {
                     break;
 
                 case "findCard":
-                    
+                    myDeck.findCard(myDeck);
                     break;
 
                 case "addCard":
