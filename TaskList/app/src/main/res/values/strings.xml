@@ -1,0 +1,24 @@
+<resources>
+    <!-- général -->
+    <string name="app_name">TaskList</string>
+    <string name="tab1_name">Liste des tâches</string>
+    <string name="tab2_name">Ajouter une tâche</string>
+    <string name="tab3_name">Calendrier</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- list tab strings -->
+    <string name="tab_list_title">Retrouvez ici toutes vos tâches</string>
+    <string name="tab_list_task_name">Intitulé</string>
+    <string name="tab_list_task_description">Description</string>
+    <string name="tab_list_task_duration">Durée</string>
+    <string name="tab_list_task_date">Date</string>
+
+    <!-- add tab strings -->
+    <string name="tab_add_title">Ajoutez de nouvelles tâches</string>
+
+    <!-- calendar tab strings -->
+    <string name="tab_calendar_title">Consultez ici votre emploi du temps</string>
+
+</resources>
